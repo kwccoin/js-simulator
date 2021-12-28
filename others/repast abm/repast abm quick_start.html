@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head>
+<meta name="keywords" content="Repast Simphony HPC Agent-based Modeling Simulation" />
+<meta name="description" content="" />
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>Repast Suite Documentation</title>
+<link href="style.css" rel="stylesheet" type="text/css" media="screen" />
+<link rel="shortcut icon" href="images/repastfavicon.ico" type="image/x-icon" />
+</head>
+<body style="background: #f1f1f1;">
+  <style>
+table.quick_start {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table.quick_start td, th {
+    border: 1px solid #dddddd;
+    padding: 8px;
+}
+
+</style>
+
+<div id="wrapper">
+	<div id="header">
+		<div id="logo">
+			<a href="/"><img src="images/Repast_logo_100h.png"></a>
+		</div>
+	</div>
+
+	<div id="page">
+	<div id="page-bgtop">
+	<div id="page-bgbtm">
+
+	<div id="content">
+	<div class="post">
+	<div class="post-bgtop">
+	<div class="post-bgbtm">
+
+	<h1 class="title">Repast Quick Start Guide</h1>
+	<p class="meta"></p>
+	<div class="entry">
+	This guide is intended to provide a minimal set of instructions to
+	download, install, and run Repast Simphony and provide the user with a path
+	towards developing their own models.  The
+	<a href="./docs/RepastFAQ/RepastFAQ.html">Repast FAQ</a>,
+	<a href="./download.html">Repast Downloads</a>, and
+	<a href="./docs.html">Repast Documentation</a> pages all
+	provide more detailed documentation.
+
+	To get started using Repast Simphony, please follow these steps:<br>
+	</div>
+
+	<h3 class="title">Step 0: Download and install a JDK (MacOS and Linux)</h3>
+	<div class="entry">
+		<ul>
+			<li><b>Download and install a JDK.</b>See the 
+					<a href="./requirements.html">requirements page</a> for more details.
+		</ul>
+	</div>
+	
+	<h3 class="title">Step 1: Download and install Repast Simphony</h3>
+	<div class="entry">
+	<ul>
+		<li><b>Download and install the latest version of Repast Simphony from the
+		<a href="./download.html">downloads page</a>.</b>
+	</ul>
+	</div>
+	
+	<h3 class="title">Step 2: Run and Configure Repast</h3>
+	<div class="entry">
+	<ul>
+		<li><b>After Repast is installed, run the "Repast Simphony" shortcut</b> for Windows or
+		macOS, or simply run Eclipse for Linux. A blank workspace is set to the ReLogo
+		perspective as shown below. Eclipse perspectives provide customized layouts
+		of the Eclipse window components depending on the type of activity the user
+		is doing. The ReLogo perspective provides a minimal view of development components.
+		<br><br>
+		<a href="./docs/RepastReference/figures/blank_workspace.png">
+			<img src="./docs/RepastReference/figures/blank_workspace.png" width="600">
+		</a>
+		<br>
+		<br>
+
+		<li><b>Set the Java Compiler Compliance Level and JRE</b>
+		From the window menu, select Eclipse -> Prefences (macOS) or Window -> Preferences (Windows).
+		In the menu tree on the left hand side, select Java -> Compiler, and set the Compiler Compliance
+		Level to 1.8. Then in the menu tree on the left hand side, select Java -> Installed JREs, and select a version
+		11 JRE. If you do not see your JRE in the list, click the "Add" button to add it.
+		Click "Apply and Close".
+		</li>
+		<br>
+		<br>
+
+		<li><b>From the window menu, select File -> Import Repast Examples</b>.
+		The model import dialog will appear with the list of available Repast models
+		if the Windows or macOS installer was used.  Linux users should download the
+		demo models separately (<a href="https://github.com/Repast/repast.simphony.models/archive/v.2.9.zip)">found here</a>) and browse to the saved location.<br>
+		Select the "Zombies_Demo" at the bottom of the list of available models and
+		click the Finish button.  This will import the Zombies demo that is described
+		in the <a href="./docs/ReLogoGettingStarted.pdf"><i>ReLogo Getting Started</i></a>
+		tutorial.<br><br>
+		<a href="./docs/RepastReference/figures/import_repast_demo.png">
+			<img src="./docs/RepastReference/figures/import_repast_demo.png" height="500">
+		</a>
+		<br>
+		<br>
+		<li><b>Run the ReLogo zombies demo model</b>.  Click the black Run selection
+		icon next to the Run button and select "Zombies_Demo Model" as shown in the
+		following figure.  The Repast runtime window will appear. (You may see warnings in the Eclipse console due to changes in Java 9 or later, but they have no impact on the model code, performance, or reliability, and can be safely ignored.)<br><br>
+		<a href="./docs/RepastReference/figures/run_zombies_launch.png">
+			<img src="./docs/RepastReference/figures/run_zombies_launch.png" width="600">
+		</a>
+		<br>
+		<br>
+		<li><b>Click the Initialize Run button to initialize the model</b>.  A number of
+		slider buttons will appear in the User Panel from which model parameters can be
+		adjusted.  Click the model Play button and the display will initialize and run
+		until the pre-determined stop time (when no humans are left), at which point the model run will finish.<br><br>
+		<a href="./docs/RepastReference/figures/relogo_zombies_run.png">
+			<img src="./docs/RepastReference/figures/relogo_zombies_run.png" width="600">
+		</a>
+		<br>
+		<br>
+	</ul>
+	</div>
+
+	<h3 class="title">Step 3: Select a Repast tutorial</h3>
+	<div class="entry">
+	<table class="quick_start">
+		<col width="25%">
+		<col width="77%">
+		<tr>
+			<th align="center">Guide</th>
+			<th align="center">User Experience Level or Application</th>
+		</tr>
+		<tr>
+			<td><a href="./docs/ReLogoGettingStarted.pdf"><i>ReLogo Getting Started</i></a></td>
+			<td>If you are new to Repast <b>or</b> if your
+			programming background is limited. ReLogo is a computer language
+			designed to help you quickly create simpler agent-based models.</td>
+		</tr>
+
+		<tr>
+			<td><a href="./docs/RepastJavaGettingStarted.pdf"><i>Repast Java Getting Started</i></a></td>
+			<td>After you are acquainted with Repast <b>or</b> if you know the Java
+			computer language and you want to develop more complex Repast
+			Simphony models.</td>
+		</tr>
+
+		<tr>
+			<td><a href="./docs/Statecharts.pdf"><i>Repast Statecharts</i></a></td>
+			<td>After you are acquainted with Repast <b>and</b> you would like to
+			start developing more complex agent-behavior logic using a visual
+			programming editor instead of writing code.</td>
+		</tr>
+
+		<tr>
+			<td><a href="./docs/RepastBatchRunsGettingStarted.pdf"><i>Repast Batch Runs Getting Started</i></a></td>
+			<td>After you are acquainted with Repast <b>and</b> you would like
+			to start running multiple individual model runs at the same time
+			for parameter sweep and exploration.</td>
+		</tr>
+
+		<tr>
+			<td><a href="http://emews.org"><i>EMEWS</i></a></td>
+			<td>After you are acquainted with Repast <b>and</b> you would like
+			to use the Extreme-scale Model Exploration with Swift (EMEWS)
+			framework for large-scale experiments with agent-based models.</td>
+		</tr>
+
+		<tr>
+			<td><a href="./docs/RepastReference/RepastReference.html"><i>Repast Simphony Reference</i></a></td>
+			<td>A comprehensive reference manual and code cookbook for Repast Simphony.</td>
+		</tr>
+	</table>
+	</div>
+
+	</div>
+	</div>
+    <div style="clear: both;">&nbsp;</div>
+    </div>
+    </div>
+	<div style="clear: both;">&nbsp;</div>
+    </div>
+	</div>
+	</div>
+
+
+  <div id="footerlinks">
+	<div id="linksbox">
+		<table>
+			<tr valign="top">
+				<td>
+					<p><a href="/">Home</a></p>
+				</td>
+				<td>
+					<p><a href="/download.html">Downloads</a></p>
+				</td>
+				<td>
+					<p><a href="/docs.html">Documentation</a></p>
+				</td>
+				<td>
+					<p><a href="/screenshots.html">Screenshots</a></p>
+				</td>
+				<td>
+					<p><a href="/support.html">Support</a></p>
+				</td>
+			</tr>
+	
+			<tr valign="top">
+				<td>
+					<p><a href="./papers.html">Papers</a></p>
+				</td>
+				<td>
+					<p><a href="./team.html">Team</a></p>
+				</td>
+				<td>
+					<p><a href="https://github.com/repast">Github</a></p>
+				</td>
+				<td>
+					<p><a href="./license.html">License</a></p>
+				</td>
+				<td>
+					<p><a href="./docs/RepastFAQ/RepastFAQ.html">FAQ</a></p>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>
+
+  <div id="footer">
+  <p>Copyright (c) 2021 Argonne National Laboratory. All rights reserved.</p>
+</div>
+
+</div> <!-- wrapper closes the entire page after footer is inserted-->	
+
+</body>
+</html>
